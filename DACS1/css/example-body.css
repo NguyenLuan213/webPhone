@@ -1,0 +1,48 @@
+#example-1 .container__course-code{
+    display: none;
+}
+#example-1 .container__course-text > .container__course-text-title{
+    display: none;
+}   
+#example-1 .container__course-text > .container__course-text-body > .container__course-text-body-answer{
+    display: none;
+}
+#example-1 .container__course-text > .container__course-text-body > button{
+    display: none;
+}
+#example-2 .container__course-code{
+    display: none;
+}
+#example-2 .container__course-text > .container__course-text-title{
+    display: none;
+}   
+#example-2 .container__course-text > .container__course-text-body > .container__course-text-body-answer{
+    display: none;
+}
+#example-2 .container__course-text > .container__course-text-body > button{
+    display: none;
+}
+#example-3 .container__course-code{
+    display: none;
+}
+#example-3 .container__course-text > .container__course-text-title{
+    display: none;
+}   
+#example-3 .container__course-text > .container__course-text-body > .container__course-text-body-answer{
+    display: none;
+}
+#example-3 .container__course-text > .container__course-text-body > button{
+    display: none;
+}
+#example-4 .container__course-code{
+    display: none;
+}
+#example-4 .container__course-text > .container__course-text-title{
+    display: none;
+}   
+#example-4 .container__course-text > .container__course-text-body > .container__course-text-body-answer{
+    display: none;
+}
+#example-4 .container__course-text > .container__course-text-body > button{
+    display: none;
+}

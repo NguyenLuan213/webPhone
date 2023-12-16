@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/logo16.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Trang đăng nhập</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <div class="login_form_container">
+        <form class="login_form">
+            <h2>Đăng Nhập</h2>
+            <div class="input_group">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="Tài khoản" class="input_text" autocomplete="off" name="txtName"
+                    id="txtName" oninvalid="InvalidMsgName(this);" oninput="InvalidMsgName(this);" required />
+            </div>
+            <div class="input_group">
+                <i class="fa fa-unlock-alt"></i>
+                <input type="password" placeholder="Mật khẩu" class="input_text" autocomplete="off"
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" oninvalid="InvalidMsgPass(this);"
+                    oninput="InvalidMsgPass(this);" id="txtPassword" name="txtPassword" required />
+            </div>
+            <input type="submit" class="button_group" id="login_button" value="Đăng Nhập Ngay"
+                onclick="redirectToLoginPage()">
+            <div class="fotter">
+                <a>Quên mật khẩu ?</a>
+                <a href="signup.html">Đăng ký</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function InvalidMsgName(textbox) {
+            if (textbox.value === '') {
+                textbox.setCustomValidity('Bạn phải nhập tài khoản!');
+            } else {
+                textbox.setCustomValidity('');
+            }
+            return true;
+        }
+
+        function InvalidMsgPass(textbox) {
+            if (textbox.value === '') {
+                textbox.setCustomValidity('Bạn phải nhập mật khẩu!');
+            } else
+                if (textbox.validity.patternMismatch) {
+                    textbox.setCustomValidity('Mật khẩu không đúng định dạng !');
+                } else {
+                    textbox.setCustomValidity('');
+                }
+            return true;
+        }
+
+        //Hàm chuyển hướng đăng nhập nút input[type=submit]
+        function redirectToLoginPage() {
+            var username = document.getElementById("txtName").value;
+            var password = document.getElementById("txtPassword").value;
+
+            // Kiểm tra tên người dùng và mật khẩu
+            if (username !== '' && password !== '') {
+                window.location.href = "signup.html"; // Thay đổi đường dẫn tới trang đăng nhập tại đây
+            } else {
+                alert("Tên người dùng hoặc mật khẩu không chính xác.");
+            }
+        }
+    </script>
+</body>
+
+</html>

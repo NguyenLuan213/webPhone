@@ -1,0 +1,215 @@
+.container-info {
+  margin-top: 92px;
+  padding: 0 15%;
+  background-color: #f0f0f0;
+}
+.content {
+  margin: 1.5rem 0 0 0;
+  padding: 3.5rem 1.5rem;
+  font-size: 1.5rem;
+  background-color: #fff;
+}
+.container-back {
+  font-size: 1.5rem;
+}
+.list-order {
+  padding: 2rem;
+  overflow: hidden;
+}
+.p-price {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 0.5rem;
+}
+.p-quality {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.p-img {
+  margin: 0 1rem 0 0;
+  border: solid 0.1px #ccc;
+  padding: 1rem;
+}
+.p-entry .label {
+}
+.p-img > img {
+  width: 100%;
+  height: 100%;
+}
+
+.dm_up_down {
+  display: flex;
+  align-items: center;
+}
+
+.down,
+.up {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #e8e5e5;
+  color: #707070;
+  cursor: pointer;
+  border: solid 0.1px #bcb9b9;
+  border-radius: 2px;
+}
+
+.down:hover,
+.up:hover {
+  opacity: 0.8;
+}
+
+.buy-quantity {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  border: #bcb9b9 0.2px solid;
+}
+.buy-quantity:focus {
+  outline: none;
+}
+
+.del-pro {
+  display: inline-block;
+  margin: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.del-pro:hover {
+  color: #000;
+}
+
+.delete-from-cart {
+  color: rgb(89, 87, 87);
+}
+
+.color {
+  display: inline-block;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-right: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0.1px rgb(152, 146, 146) solid;
+  transform: translateY(20%);
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+}
+.white {
+  background-color: white;
+}
+
+.total {
+  font-weight: 600;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+.total .label {
+  font-size: 1.8rem;
+}
+.total .right {
+  color: rgb(176, 40, 40);
+  font-size: 1.9rem;
+}
+
+.info-customer {
+  border: solid 0.1px #ccc;
+  padding: 2.5rem;
+}
+/* CSS cho ba bước */
+.step {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.option-group, .item-form, .select-method, .step-2 >p{
+  margin: 2rem;
+}
+
+.step_option label{
+  margin-right: 2rem;
+}
+input,select{
+  border-radius: 5px;
+}
+.item-form input:focus{
+  outline: none;
+  padding: 5px 10px;
+  border: #bcb9b9 0.2px solid;
+}
+.item-form select:focus {
+  outline: none;
+  box-shadow: none;
+  border: #bcb9b9 0.2px solid;
+}
+.item-form input{
+  width: 100%;
+  padding: 5px 10px;
+  border: #bcb9b9 0.2px solid;
+}
+.item-form select {
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 1.4rem;
+  border: #bcb9b9 0.2px solid;
+}
+
+
+.method-pay {
+  margin-top: 10px;
+  margin-left: 2rem;
+}
+
+.method-pay span {
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.method-pay span.active {
+  font-weight: bold;
+}
+
+.main-pay {
+  margin-top: 10px;
+}
+
+.btn-cart {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn_next {
+  padding: 5px 0;
+  width: 100%;
+  background-color: #ce1f1f;
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_next:hover {
+  background-color: #be2020;
+}
+
+/* CSS cho hóa đơn công ty */
+.item-form {
+  margin-top: 10px;
+}
+
+

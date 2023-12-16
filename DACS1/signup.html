@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/logo16.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/signup.css">
+    <title>Trang đăng ký</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="login_form_container">
+        <form class="login_form">
+            <h2>Đăng ký</h2>
+            <div class="input_group">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="Tên tài khoản" class="input_text" autocomplete="off" name="txtName"
+                    id="txtName" oninvalid="InvalidMsgName(this);" oninput="InvalidMsgName(this);" required />
+            </div>
+            <div class="input_group">
+                <i class="fa fa-unlock-alt"></i>
+                <input type="password" placeholder="Mật khẩu" class="input_text" autocomplete="off"
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" oninvalid="InvalidMsgPass(this);"
+                    oninput="InvalidMsgPass(this);" id="txtPassword" name="txtPassword" required />
+            </div>
+            <div class="input_group">
+                <i class="fa fa-unlock-alt"></i>
+                <input type="password" placeholder="Nhập lại mật khẩu" class="input_text" autocomplete="off"
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" oninvalid="confirmPassword(this);"
+                    oninput="confirmPassword(this);" required />
+            </div>
+            <div class="input_group">
+                <i class="fas fa-envelope fa-lg"></i>
+                <input type="email" placeholder="Email" class="input_text" autocomplete="off"
+                    oninvalid="InvalidMsgEmail(this);" oninput="InvalidMsgEmail(this);" id="txtEmail" name="txtEmail"
+                    required />
+            </div>
+            <div class="input_group">
+                <i class="fas fa-phone-square-alt fa-lg"></i>
+                <input type="text" placeholder="Số điện thoại liên kết" class="input_text" autocomplete="off"
+                    pattern="^\d{10,}$" oninvalid="InvalidMsgPhone(this);" oninput="InvalidMsgPhone(this);" required />
+            </div>
+            <input type="submit" class="button_group" id="login_button" value="Đăng ký">
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function InvalidMsgName(textbox) {
+            if (textbox.value === '') {
+                textbox.setCustomValidity('Bạn phải nhập tài khoản!');
+            } else {
+                textbox.setCustomValidity('');
+            }
+            return true;
+        }
+
+        function InvalidMsgPass(textbox) {
+            if (textbox.value === '') {
+                textbox.setCustomValidity('Bạn phải nhập mật khẩu!');
+            } else
+                if (textbox.validity.patternMismatch) {
+                    textbox.setCustomValidity('Mật khẩu không đúng định dạng !');
+                } else {
+                    textbox.setCustomValidity('');
+                }
+            return true;
+        }
+        function confirmPassword(textbox) {
+            if (textbox.value === '') {
+                textbox.setCustomValidity('Bạn phải nhập mật khẩu!');
+            } else if (textbox.value !== document.getElementById('txtPassword').value) {
+                textbox.setCustomValidity("Mật khẩu không khớp, vui lòng nhập lại!");
+            } else {
+                textbox.setCustomValidity('');
+            }
+        }
+        function InvalidMsgEmail(textbox) {
+            if (textbox.value === '') {
+                textbox.setCustomValidity('Bạn phải nhập địa chỉ email!');
+            } else
+                if (textbox.validity.typeMismatch) {
+                    textbox.setCustomValidity('Địa chỉ email không đúng định dạng !');
+                } else {
+                    textbox.setCustomValidity('');
+                }
+            return true;
+        }
+        function InvalidMsgPhone(textbox) {
+            if (textbox.value === '') {
+                textbox.setCustomValidity('Bạn phải nhập số điện thoại!');
+            } else if (textbox.validity.patternMismatch) {
+                textbox.setCustomValidity('Số điện thoại không đúng định dạng!');
+            } else {
+                textbox.setCustomValidity('');
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

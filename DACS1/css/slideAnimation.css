@@ -1,0 +1,53 @@
+.bien-mat-ben-trai{
+    animation: bien-mat-ben-trai .4s linear;
+}
+@-webkit-keyframes bien-mat-ben-trai{
+    from{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+.di-vao-ben-phai{
+    animation: di-vao-ben-phai .4s linear;
+}
+@-webkit-keyframes di-vao-ben-phai{
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+/*xử lý nút prev*/
+.bien-mat-ben-phai{
+    animation: bien-mat-ben-phai .4s linear;
+}
+@-webkit-keyframes bien-mat-ben-phai{
+    from{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+.di-vao-ben-trai{
+    animation: di-vao-ben-trai .4s linear;
+}
+@-webkit-keyframes di-vao-ben-trai{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
